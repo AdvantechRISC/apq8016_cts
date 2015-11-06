@@ -16,6 +16,13 @@
   bug: 17536113
 },
 {
+  description: "the ConnectivityConstraintTest are not yet stable",
+  names: [
+    "android.jobscheduler.cts.ConnectivityConstraintTest"
+  ],
+  bug: 18117279
+},
+{
   description: "tests a fragile by nature as they rely on hardcoded behavior",
   names: [
     "android.accessibilityservice.cts.AccessibilityTextTraversalTest#testActionNextAndPreviousAtGranularityPageOverText",
@@ -230,23 +237,6 @@
   bug: 17989532
 },
 {
-  description: "The new AE/AF trigger tests are not yet passing on all devices",
-  names: [
-    "android.hardware.camera2.cts.RobustnessTest#testBasicTriggerSequence",
-    "android.hardware.camera2.cts.RobustnessTest#testSimultaneousTriggers",
-    "android.hardware.camera2.cts.RobustnessTest#testAfThenAeTrigger",
-    "android.hardware.camera2.cts.RobustnessTest#testAeThenAfTrigger"
-  ],
-  bug: 22180706
-},
-{
-  description: "The new create session test is not yet passing on all devices",
-  names: [
-    "android.hardware.camera2.cts.CameraDeviceTest#testCreateSessions"
-  ],
-  bug: 22092756
-},
-{
   description: "The new long processing test is not yet passing on all devices",
   names: [
     "android.hardware.camera2.cts.ImageReaderTest#testLongProcessingRepeatingRaw",
@@ -260,6 +250,13 @@
     "android.hardware.cts.CameraTest#testPreviewFpsRange"
   ],
   bug: 23008511
+},
+{
+  description: "Light status bar CTS coming in late",
+  names: [
+    "com.android.cts.systemui.LightStatusBarTests#testLightStatusBarIcons"
+  ],
+  bug: 23427621
 },
 {
   description: "known failures",
@@ -299,10 +296,59 @@
 {
   description: "New assist tests that do not yet have a track record.",
   names: [
-    "android.assist.cts.ScreenshotTest",
+    "android.assist.cts.AssistantContentViewTest",
     "android.assist.cts.ExtraAssistDataTest",
-    "android.assist.cts.AssistantContentViewTest"
+    "android.assist.cts.FocusChangeTest",
+    "android.assist.cts.LargeViewHierarchyTest",
+    "android.assist.cts.ScreenshotTest",
+    "android.assist.cts.TextViewTest",
+    "android.assist.cts.WebViewTest"
   ],
   bug: 21668302
+},
+{
+  description: "ConnectivityConstraintTest job scheduler not working.",
+  names: [
+     "android.jobscheduler.cts.ConnectivityConstraintTest#testConnectivityConstraintExecutes_withWifi",
+     "android.jobscheduler.cts.ConnectivityConstraintTest#testUnmeteredConstraintExecutes_withWifi"
+  ],
+  bug: 21262226
+},
+{
+   description: "ConnectivityConstraintTest times out.",
+   names: [
+     "android.jobscheduler.cts.TimingConstraintsTest#testJobParameters_unexpiredDeadline"
+   ],
+   bug: 23144425
+},
+{
+   description: "Telephony returning wrong value.",
+   names: [
+     "android.telephony.cts.CellInfoTest#testCellInfo"
+   ],
+   bug: 23979591
+},
+{
+   description: "Video encoding tests are timing out.",
+   names: [
+     "android.media.cts.VideoEncoderTest#testGoogH264FlexArbitraryW",
+     "android.media.cts.VideoEncoderTest#testGoogH264SurfArbitraryW"
+   ],
+   bug: 23827982
+},
+{
+  description: "tests not yet ready",
+  names: [
+    "android.telecom.cts.OutgoingCallTest#testStartCallWithSpeakerphoneFalse_SpeakerphoneOffInCall",
+    "android.telecom.cts.OutgoingCallTest#testStartCallWithSpeakerphoneNotProvided_SpeakerphoneOffByDefault"
+  ],
+  bug: 24067587
+},
+{
+  description: "protected broadcast not working",
+  names: [
+   "android.permission2.cts.ProtectedBroadcastsTest#testSendProtectedBroadcasts"
+  ],
+  bug: 23192492
 }
 ]
